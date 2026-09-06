@@ -1,17 +1,15 @@
 import { FaWhatsapp, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import TheLinks from './TheLinks'
+
 function Navbar() {
     return (
         <div>
             <nav>
-            <h1>
+            <h1> 
                 Victor Olusegun.
             </h1>
 
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Projects</a></li>
-                <li><a href="#contact">Contact Me</a></li>
-            </ul>
+            <TheLinks />
 
             <div>
                 <FaWhatsapp />
@@ -24,4 +22,4 @@ function Navbar() {
     )
 }
 
-export default Navbar
+export default Navbar;
