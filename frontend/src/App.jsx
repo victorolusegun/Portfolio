@@ -1,17 +1,21 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import {Routes, Route} from 'react-router-dom'
 import HomePage from './pages/HomePage'
+import Projects from './pages/Projects'
+import NavBar from './components/NavBar.jsx'
+import Footer from './components/Footer.jsx'
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
-    <>
-      <HomePage />
-    </>
+    <div className='min-h-screen bg-white flex flex-col text-black'>
+      <NavBar />
+      <main className='flex-1'>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </main>
+      <Footer />
+    </div>
   )
 }
 
