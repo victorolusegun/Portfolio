@@ -1,5 +1,6 @@
 import presentImage from '../assets/sunset.jpg'
-import { FaWhatsapp, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import SocialPanel from '../components/SocialPanel'
+
 function HomePage() {
     // Languages I've Used
     const languages = [
@@ -34,46 +35,11 @@ function HomePage() {
                 </div>
             </aside>
 
-            <section id='contact' className='flex items-center gap-3'>
-                <a
-                    href="https://wa.me/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="WhatsApp"
-                    className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-black/5 text-xl transition-all duration-200 hover:-translate-y-1 hover:bg-black hover:text-white"
-                >
-                    <FaWhatsapp />
-                </a>
-
-                <a
-                    href="https://github.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                    className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-black/5 text-xl transition-all duration-200 hover:-translate-y-1 hover:bg-black hover:text-white"
-                >
-                    <FaGithub />
-                </a>
-
-                <a
-                    href="https://linkedin.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-black/5 text-xl transition-all duration-200 hover:-translate-y-1 hover:bg-black hover:text-white"
-                >
-                    <FaLinkedin />
-                </a>
-
-                <a
-                    href="https://x.com/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="X"
-                    className="flex h-11 w-11 items-center justify-center rounded-full border border-black/10 bg-black/5 text-xl transition-all duration-200 hover:-translate-y-1 hover:bg-black hover:text-white"
-                >
-                    <FaTwitter />
-                </a>
+            <section id='contact' className='flex flex-col items-center justify-center py-24'>
+                <h3 className='mb-10 text-4xl font-bold leading-tight text-black md:text-6xl'>
+                    Contact
+                </h3>
+                <SocialPanel />
             </section>
         </div>
     )
