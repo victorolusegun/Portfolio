@@ -44,7 +44,7 @@ function SocialPanel () {
             <div className='flex items-center justify-center gap-6'>
                 <button
                     onClick={() => downChange()}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-black/5 text-xl text-black/60 transition hover:bg-black/10 hover:text-black"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-xl text-white transition hover:bg-white/20 hover:border-white/40"
                 >
                     ←
                 </button>
@@ -54,7 +54,7 @@ function SocialPanel () {
                     target="_blank" 
                     rel="noopener noreferrer" 
                     aria-label={socialInfo[isInView].label}
-                    className='flex h-44 w-52 flex-col items-center justify-center gap-4 rounded-3xl border border-white/10 bg-white/5 text-black shadow-lg backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/10'
+                    className="flex h-44 w-52 items-center justify-center rounded-3xl border border-black/10 bg-white text-black shadow-lg transition-all duration-200 hover:-translate-y-1 hover:border-white/30 hover:bg-white/20 hover:backdrop-blur-md"
                 >
                     <div className='text-5xl'>
                         {social}
@@ -63,12 +63,12 @@ function SocialPanel () {
 
                 <button
                     onClick={() => upChange()}
-                    className="flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-black/5 text-xl text-black/60 transition hover:bg-black/10 hover:text-black"
+                    className="flex h-10 w-10 items-center justify-center rounded-full border border-white/20 bg-white/10 text-xl text-white transition hover:bg-white/20 hover:border-white/40"
                 >
                     →
                 </button>
             </div>
-            <p className="mt-4 text-sm font-medium text-black/60">
+            <p className="mt-4 text-sm font-medium text-white/60">
                 {socialInfo[isInView].label}
             </p>
         </div>

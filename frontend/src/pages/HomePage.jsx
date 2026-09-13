@@ -1,5 +1,6 @@
 import presentImage from '../assets/sunset.jpg'
 import SocialPanel from '../components/SocialPanel'
+import ProjectCard from '../components/ProjectCard'
 
 function HomePage() {
     // Languages I've Used
@@ -10,6 +11,11 @@ function HomePage() {
         {name: 'Python', libraries: ['Django', 'FastAPI', 'Streamlit']},
     ]
 
+    const projects = [
+        {name: 'POS Proit Calculator', url: 'profit.calc', desc: 'A tool for POS agents to calculate profit', image: '.../public/favicon.ico' },
+        {name: 'VaseCrib', url: 'vasecrib.com', desc: 'A tool for finding where to live', image: '.../public/favicon.ico' },
+    ]
+
     return (
         <div>
             <div className='mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 py-24 md:grid-cols-[3fr_2fr]'>
@@ -17,7 +23,7 @@ function HomePage() {
                     <h3 className='mb-8 text-4xl font-bold leading-tight md:text-6xl'>
                         About Me
                     </h3>
-                    <p className="leading-8 text-black/60 md:text-lg">
+                    <p className="leading-8 text-white/60 md:text-lg">
                         My name is <strong>Victor Olusegun</strong>, and I am a software developer passionate about building systems that solve real-world problems. 
                         I have experience developing web applications and working with data analysis, and I am continually expanding my skills across software engineering and emerging technologies.
                         My primary interest is in <strong>Artificial Intelligence (AI) and Machine Learning</strong>, particularly in building intelligent systems that can be applied to practical, real-world problems. 
@@ -36,11 +42,24 @@ function HomePage() {
                     </div>
                 </aside>
             </div>
+            
             <section id='contact' className='flex flex-col items-center justify-center py-24'>
-                <h3 className='mb-10 text-4xl font-bold leading-tight text-black md:text-6xl'>
+                <h3 className='mb-10 text-4xl font-bold leading-tight text-white md:text-6xl'>
                     Contact
                 </h3>
                 <SocialPanel />
+            </section>
+
+            <section id="projects" className="flex flex-col items-center justify-center py-24">
+                <h3 className="mb-10 text-4xl font-bold leading-tight text-white md:text-6xl">
+                    My Projects
+                </h3>
+
+                <div className="grid w-full max-w-7xl grid-cols-1 gap-8 px-6 md:grid-cols-2 lg:grid-cols-4">
+                    {projects.map((project) => (
+                        <ProjectCard key={project.id} project={project} />
+                    ))}
+                </div>
             </section>
         </div>
     )
